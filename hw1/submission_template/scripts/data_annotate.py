@@ -1,3 +1,5 @@
+# run from scripts directory
+
 import pandas as pd
 import numpy as np
 
@@ -20,7 +22,7 @@ df_q = df_eng[~df_eng['content'].str.contains(r'\?.*')]
 df_q.to_csv('../data/pruned_tweets.tsv', sep = '\t', index=False)
 
 #create new trump_mention feature
-df_trump = df_q.assign(trump_mention = df_q['content'].str.contains(r'(\s|\W|\b)Trump(\s|\W|\b)'))
+df_trump = df_q.assign(trump_mention = df_q['content'].str.contains(r'(?:\s|\W|\b)Trump(?:\s|\W|\b)'))
 
 #get only the columns we want
 df_pruned = df_trump[['tweet_id','publish_date','content','trump_mention']]
