@@ -6,11 +6,10 @@ import argparse
 parentdir = Path(__file__).parents[1]
 sys.path.append(parentdir)
 
-# print(parentdir)
-# print(sys.path)
-# print(dialog_file_path)
+# default output file name
 output_file = "output.json"
 
+# parse the command line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("-o", "--output", help = "add the name of the output file", action="store")
 parser.add_argument('data', help = "add name of dialog data file", action="store")
@@ -19,29 +18,23 @@ if args.output:
     output_file = args.output
 data_file = args.data
 
-# print(args.output)
-# print(args.data)
-
 
 # gets path to the data csv
 data_path = os.path.join(parentdir, 'data', data_file)
 df = pd.read_csv(data_path)
-# print(list(df.columns))
 
-# print(df['pony'].value_counts()[:15])
 
 # dictionary of the counts for our 6 main ponies
 count_dict = {
-    'twilight sparkle' : int(df['pony'].value_counts()['Twilight Sparkle']),
-    'applejack' : int(df['pony'].value_counts()['Applejack']),
-    'rarity' : int(df['pony'].value_counts()['Rarity']),
-    'pinkie pie' : int(df['pony'].value_counts()['Pinkie Pie']),
-    'rainbow dash' : int(df['pony'].value_counts()['Rainbow Dash']),
-    'fluttershy' : int(df['pony'].value_counts()['Fluttershy']),
+    'twilight sparkle' : int(len(df.loc[df['pony'].str.contains('^twilight sparkle$', case=False, regex=True)])),
+    'applejack' : int(len(df.loc[df['pony'].str.contains('^applejack$', case=False, regex=True)])),
+    'rarity' : int(len(df.loc[df['pony'].str.contains('^rarity$', case=False, regex=True)])),
+    'pinkie pie' : int(len(df.loc[df['pony'].str.contains('^pinkie pie$', case=False, regex=True)])),
+    'rainbow dash' : int(len(df.loc[df['pony'].str.contains('^rainbow dash$', case=False, regex=True)])),
+    'fluttershy' : int(len(df.loc[df['pony'].str.contains('^fluttershy$', case=False, regex=True)])),
 }
 
-# print(count_dict)
-
+# total number of speech events
 total = len(df)
 
 # dictionary of verbosity for each pony, count / total number of lines
@@ -54,18 +47,16 @@ verb_dict = {
     'fluttershy' : float(round(count_dict['fluttershy'] / total, 2)),
 }
 
-# print(verb_dict)
-
 # put into a final dictionary
 result = {
     "count" : count_dict,
     "verbosity" : verb_dict
 }
 
-# print(result)
+
 # output path
 out_path = os.path.join(parentdir, output_file)
 
 # produce a JSON file
 with open (out_path, 'w') as outfile:
-    json.dump(result, outfile)
+    json.dump(result, outfile, indent=4)
