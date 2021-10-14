@@ -1,0 +1,15 @@
+[I 05:07:36.200 NotebookApp] Serving notebooks from local directory: /home/sju3
+[I 05:07:36.200 NotebookApp] Jupyter Notebook 6.4.4 is running at:
+[I 05:07:36.200 NotebookApp] https://ip-172-31-16-91:8888/
+[I 05:07:36.200 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 05:07:46.680 NotebookApp] SSL Error on 9 ('74.57.164.181', 55237): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1129)
+[W 05:07:46.686 NotebookApp] SSL Error on 10 ('74.57.164.181', 56803): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1129)
+[I 05:07:46.783 NotebookApp] 302 GET / (74.57.164.181) 0.600000ms
+[W 05:07:47.301 NotebookApp] SSL Error on 10 ('74.57.164.181', 55571): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1129)
+[W 05:07:47.314 NotebookApp] SSL Error on 12 ('74.57.164.181', 56380): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1129)
+[W 05:07:47.315 NotebookApp] SSL Error on 11 ('74.57.164.181', 61496): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1129)
+[W 05:07:47.315 NotebookApp] SSL Error on 13 ('74.57.164.181', 65093): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1129)
+[W 05:07:47.322 NotebookApp] SSL Error on 14 ('74.57.164.181', 61130): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1129)
+[W 05:07:47.406 NotebookApp] SSL Error on 10 ('74.57.164.181', 51584): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] sslv3 alert certificate unknown (_ssl.c:1129)
+/home/sju3/miniconda3/lib/python3.9/json/encoder.py:257: UserWarning: date_default is deprecated since jupyter_client 7.0.0. Use jupyter_client.jsonutil.json_default.
+  return _iterencode(o, 0)
