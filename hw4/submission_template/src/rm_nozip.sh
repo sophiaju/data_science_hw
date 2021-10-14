@@ -2,4 +2,4 @@
 
 # remove lines with missing zip
 
-awk -F',' '$4 != ""' $1 > data/awk_clean.csv
+awk -F',' '{if ($4 != "" && $4 != "N/A") print $0}' $1 > data/awk_clean.csv
