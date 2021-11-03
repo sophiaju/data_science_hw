@@ -21,7 +21,7 @@ def main():
             # print(title, len(title.split()))
             
             # add the number of words in that title to total words
-            total_words += len(title.split())
+            total_words += len(title)
             # count the number of posts
             total_posts += 1
             
