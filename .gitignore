@@ -139,3 +139,21 @@ cython_debug/
 
 .DS_Store
 *.DS_Store
+
+# extraneous files for hw
+hw1/submission_template.zip
+hw2/submission_template.zip
+hw3/260852000_submission_template.zip
+hw3/submission_template/data/example.txt
+hw4/submission_template/260852000_submission_template.zip
+hw4/submission_template/data/awk_clean.csv
+hw4/submission_template/data/awk_clean_test.csv
+hw4/submission_template/data/awk_results.txt
+hw4/submission_template/data/nyc_311.csv.tgz
+hw4/submission_template/data/nyc_311_limit.csv
+hw4/submission_template/src/all_2020.csv
+hw4/submission_template/src/all_2020_copy.csv
+hw4/submission_template/src/output.csv
+hw4/submission_template/src/output_copy.csv
+hw4/submission_template/src/test_output.csv
+hw5/submission_template/260852000_submission_template.zip
