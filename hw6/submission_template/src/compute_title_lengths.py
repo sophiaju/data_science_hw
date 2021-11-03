@@ -11,7 +11,7 @@ def main():
 
     with open(input_path, 'r') as infile:
         
-        total_words = 0
+        total_chars = 0
         total_posts = 0
 
         # line by line, 
@@ -21,14 +21,14 @@ def main():
             # print(title, len(title.split()))
             
             # add the number of words in that title to total words
-            total_words += len(title)
+            total_chars += len(title)
             # count the number of posts
             total_posts += 1
             
         # print(total_words, total_posts)
 
         # calculate avg title length and print!
-        avg_title_len = total_words/total_posts
+        avg_title_len = total_chars/total_posts
         print(avg_title_len)
 
         
