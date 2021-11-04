@@ -8,7 +8,7 @@ def gen_json(list_subs, output_name):
         for sub in list_subs:
 
             url = f"https://www.reddit.com/r/{sub}/new.json?limit=100"
-            print(url)
+            print(sub)
 
             headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}
 
@@ -31,8 +31,8 @@ def main():
     pop_posts = ["AskReddit", "memes", "politics", "nfl", "nba", "wallstreetbets", "teenagers", "PublicFreakout", "leagueoflegends", "unpopularopinion"]
 
     # generate files
-    gen_json(pop_subs, "../sample1.json")
-    gen_json(pop_posts, "../sample2.json")
+    gen_json(pop_subs, "sample1.json")
+    gen_json(pop_posts, "sample2.json")
     
         
 

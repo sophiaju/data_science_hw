@@ -24,8 +24,6 @@ def main():
             total_chars += len(title)
             # count the number of posts
             total_posts += 1
-            
-        # print(total_words, total_posts)
 
         # calculate avg title length and print!
         avg_title_len = total_chars/total_posts
