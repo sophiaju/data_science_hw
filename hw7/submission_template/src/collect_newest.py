@@ -27,8 +27,10 @@ def main():
     # if given an output file
     if args.output:
 
+        # make output file directories
         if not os.path.exists(os.path.dirname(output_path)):
-            os.makedirs(os.path.dirname(output_path))
+            if os.path.dirname(output_path) != '':
+                os.makedirs(os.path.dirname(output_path))
 
         with open(output_path, 'w') as output:
 
