@@ -33,6 +33,7 @@ def main():
     # list of stopwords
     stopwords = ["others", "ponies", "and", "all"]
 
+    # get counts of all pony dialog and sorts
     all_counts = df['pony'].value_counts().to_dict()
     
     # leave only valid characters in all_counts dict
